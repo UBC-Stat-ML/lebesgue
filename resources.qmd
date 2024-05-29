@@ -20,7 +20,7 @@ Surprisingly, the answer is yes. The generic setup is too abstract to permit con
 The general story of these meta-algorithms starts in the same way as Lebesgue's original idea: exploiting the fact that while the domain of $f$ is unstructured, its image is $\mathbb{R}$.
 
 ::: column-margin
-![](../images/lebesgue.png){width="200"}
+![](lebesgue.png){width="200"}
 :::
 
 But in contrast to the theory of Lebesgue integration, which is a settled field, Computational Lebesgue Integration is in active development.
@@ -32,7 +32,7 @@ This page is a growing bibliography of Computational Lebesgue Integration method
 ### Annealing
 
 ::: column-margin
-![An example of annealed distributions.](../images/annealing.png){#fig-PT width="200"}
+![An example of annealed distributions.](annealing.png){#fig-PT width="200"}
 :::
 
 Many methods described here *anneal* the distribution of interest $\pi(\text{d}x) \propto \exp(\ell(x)) \pi_0(\text{d}x)$, i.e., consider the path $\pi_\beta(\text{d}x) \propto \exp(\beta \ell(x)) \pi_0(\text{d}x)$. Given the direct connection between $\beta$ and the inverse temperature in statistical mechanics, the notion of annealing appears right from the very beginning of the Monte Carlo literature, in Equation (2) of @metropolis1953. It is used as a tool detached from its statistical mechanics interpretation as early as @pincus1970.
@@ -40,7 +40,7 @@ Many methods described here *anneal* the distribution of interest $\pi(\text{d}x
 ### Meta-algorithms
 
 ::: column-margin
-![Swap structure of PT algorithm.](../images/PT.png){#fig-PT width="200"}
+![Swap structure of PT algorithm.](PT.png){#fig-PT width="200"}
 :::
 
 Two large families of meta-algorithms are able to take a basic, inefficient MCMC 
@@ -50,7 +50,7 @@ consistency guarantees.
 The first family is designed via MCMC on augmented distributions:
 
 ::: column-margin
-![SMC particle genealogy.](../images/SMC.png){#fig-SMC width="150"}
+![SMC particle genealogy.](SMC.png){#fig-SMC width="150"}
 :::
 
 -   Parallel tempering (PT): @geyer1991
@@ -84,7 +84,7 @@ a black box state space.
     -   @biron-lattes2024
     
 ::: column-margin
-![](../images/non-reversible.png){height="150"}
+![](non-reversible.png){height="150"}
 :::
 
 ## Methodological extensions
@@ -95,7 +95,7 @@ In challenging problems, using an adaptive discretization of $\beta \in [0, 1]$
 is critical for good performance. 
 
 ::: column-margin
-![](../images/adaptive.png){width="150"}
+![](adaptive.png){width="150"}
 :::
 
 -   For stochastic gradient methods, see @atchadé2011 and @miasojedow2013.
@@ -108,7 +108,7 @@ distributions are generalized into a path of distributions. Paths
 that are geodesic can lead to substantial savings. 
 
 ::: column-margin
-![](../images/geodesic.png){width="150"}
+![](geodesic.png){width="150"}
 :::
 
 -   For AIS/ASMC, see:
@@ -124,7 +124,7 @@ variational distribution $q_\phi$ can also be used, either by itself or
 in conjunction. 
 
 ::: column-margin
-![](../images/variational.png){width="120"}
+![](variational.png){width="120"}
 :::
 
 -   In the context of path sampling:
