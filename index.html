@@ -107,6 +107,7 @@ window.Quarto = {
   <li><a href="#adaptive-schedules" id="toc-adaptive-schedules" class="nav-link" data-scroll-target="#adaptive-schedules">Adaptive schedules</a></li>
   <li><a href="#generalized-distribution-paths" id="toc-generalized-distribution-paths" class="nav-link" data-scroll-target="#generalized-distribution-paths">Generalized distribution paths</a></li>
   <li><a href="#variational-blends" id="toc-variational-blends" class="nav-link" data-scroll-target="#variational-blends">Variational blends</a></li>
+  <li><a href="#convergence-of-adaptive-methods" id="toc-convergence-of-adaptive-methods" class="nav-link" data-scroll-target="#convergence-of-adaptive-methods">Convergence of adaptive methods</a></li>
   </ul></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   </ul>
@@ -167,14 +168,10 @@ Figure&nbsp;1: An example of annealed distributions.
 <h3 class="anchored" data-anchor-id="meta-algorithms">Meta-algorithms</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-PT" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-PT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="PT.png" class="img-fluid figure-img" width="200">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Swap structure of PT algorithm.
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PT.png" class="img-fluid figure-img" width="200"></p>
+<figcaption>Swap structure of PT algorithm.</figcaption>
 </figure>
 </div>
 </div></div><p>Two large families of meta-algorithms are able to take a basic, inefficient MCMC algorithm and transform it into a potentially much faster one while preserving consistency guarantees.</p>
@@ -187,7 +184,7 @@ Figure&nbsp;2: Swap structure of PT algorithm.
 <img src="SMC.png" class="img-fluid figure-img" width="150">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SMC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: SMC particle genealogy.
+Figure&nbsp;2: SMC particle genealogy.
 </figcaption>
 </figure>
 </div>
@@ -278,6 +275,14 @@ Figure&nbsp;3: SMC particle genealogy.
 </ul></li>
 </ul>
 </section>
+<section id="convergence-of-adaptive-methods" class="level3">
+<h3 class="anchored" data-anchor-id="convergence-of-adaptive-methods">Convergence of adaptive methods</h3>
+<p>Theoretical frameworks to analyze the convergence of the above adaptive methods (schedule, end points, paths):</p>
+<ul>
+<li>For stochastic gradient methods, see, e.g., <span class="citation" data-cites="andrieu2008">Andrieu and Thoms (<a href="#ref-andrieu2008" role="doc-biblioref">2008</a>)</span> for the general toolbox and <span class="citation" data-cites="miasojedow2013">Miasojedow, Moulines, and Vihola (<a href="#ref-miasojedow2013" role="doc-biblioref">2013</a>)</span> for analysis in the case of PT specifically.</li>
+<li>For round based schemes, see <span class="citation" data-cites="chimisov2018">Chimisov, Latuszynski, and Roberts (<a href="#ref-chimisov2018" role="doc-biblioref">2018</a>)</span> for general tools, and <span class="citation" data-cites="Surjanovic2022Parallel">Surjanovic et al. (<a href="#ref-Surjanovic2022Parallel" role="doc-biblioref">2022</a>)</span> for analysis in the case of variational PT specifically.</li>
+</ul>
+</section>
 </section>
 <section id="software" class="level2">
 <h2 class="anchored" data-anchor-id="software">Software</h2>
@@ -292,6 +297,9 @@ Figure&nbsp;3: SMC particle genealogy.
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-andrieu2008" class="csl-entry" role="listitem">
+Andrieu, Christophe, and Johannes Thoms. 2008. <span>“A Tutorial on Adaptive MCMC.”</span> <em>Statistics and Computing</em> 18 (4): 343–73. <a href="https://doi.org/10.1007/s11222-008-9110-y">https://doi.org/10.1007/s11222-008-9110-y</a>.
+</div>
 <div id="ref-atchadé2011" class="csl-entry" role="listitem">
 Atchadé, Yves F., Gareth O. Roberts, and Jeffrey S. Rosenthal. 2011. <span>“Towards Optimal Scaling of Metropolis-Coupled Markov Chain Monte Carlo.”</span> <em>Statistics and Computing</em> 21 (4): 555–68. <a href="https://doi.org/10.1007/s11222-010-9192-1">https://doi.org/10.1007/s11222-010-9192-1</a>.
 </div>
@@ -309,6 +317,9 @@ Brekelmans, Rob, Vaden Masrani, Frank Wood, Greg Ver Steeg, and Aram Galstyan. 2
 </div>
 <div id="ref-cameron_recursive_2014" class="csl-entry" role="listitem">
 Cameron, Ewan, and Anthony Pettitt. 2014. <span>“Recursive <span>Pathways</span> to <span>Marginal</span> <span>Likelihood</span> <span>Estimation</span> with <span>Prior</span>-<span>Sensitivity</span> <span>Analysis</span>.”</span> <em>Statistical Science</em> 29 (3): 397–419. <a href="https://www.jstor.org/stable/43288518">https://www.jstor.org/stable/43288518</a>.
+</div>
+<div id="ref-chimisov2018" class="csl-entry" role="listitem">
+Chimisov, Cyril, Krzysztof Latuszynski, and Gareth Roberts. 2018. <span>“Adapting the Gibbs Sampler.”</span> <em>arXiv:1801.09299 [Stat]</em>, January. <a href="http://arxiv.org/abs/1801.09299">http://arxiv.org/abs/1801.09299</a>.
 </div>
 <div id="ref-delmoral2006" class="csl-entry" role="listitem">
 Del Moral, Pierre, Arnaud Doucet, and Ajay Jasra. 2006. <span>“Sequential Monte Carlo Samplers.”</span> <em>Journal of the Royal Statistical Society. Series B (Statistical Methodology)</em> 68 (3): 411–36. <a href="http://www.jstor.org/stable/3879283">http://www.jstor.org/stable/3879283</a>.
