@@ -6,12 +6,9 @@ format:
 bibliography: references.bib
 ---
 
-
 ## Introduction
 
 The Lebesgue integral, $\int_{\mathcal{X}} f(x) \mu(\text{d}x)$ makes little structural assumptions on the integrand domain $\mathcal{X}$. This high level of generality is useful for example when performing Bayesian inference over combinatorial spaces. As a specific use case, consider Bayesian phylogenetic inference, where $\mathcal{X}$ is the space of phylogenetic trees.
-
-
 
 Are there *generic* tools to approach the problem of computing Lebesgue integrals? By generic, we mean that they should apply to all situations where the Lebesgue integral is defined.
 
@@ -40,12 +37,10 @@ Many methods described here *anneal* the distribution of interest $\pi(\text{d}x
 ### Meta-algorithms
 
 ::: column-margin
-![Swap structure of PT algorithm.](PT.png){#fig-PT width="200"}
+![Swap structure of PT algorithm.](PT.png){width="200"}
 :::
 
-Two large families of meta-algorithms are able to take a basic, inefficient MCMC 
-algorithm and transform it into a potentially much faster one while preserving 
-consistency guarantees. 
+Two large families of meta-algorithms are able to take a basic, inefficient MCMC algorithm and transform it into a potentially much faster one while preserving consistency guarantees.
 
 The first family is designed via MCMC on augmented distributions:
 
@@ -56,12 +51,10 @@ The first family is designed via MCMC on augmented distributions:
 -   Parallel tempering (PT): @geyer1991
 -   Simulated tempering (ST): @geyer1995
 
-The second family uses importance sampling on augmented distributions combined 
-with resampling:
+The second family uses importance sampling on augmented distributions combined with resampling:
 
 -   Annealed importance sampling (AIS): @neal2001
 -   Annealed Sequential Monte Carlo (ASMC): @delmoral2006
-
 
 ### Normalization constants
 
@@ -72,17 +65,15 @@ To obtain estimates of normalization constant from the output of the above algor
 
 ## Non-reversible variants
 
-The variable $\beta$ is on $[0, 1]$, and hence 
-facilitate the design of non-reversible algorithms even when $\mathcal{X}$ is 
-a black box state space.
+The variable $\beta$ is on $[0, 1]$, and hence facilitate the design of non-reversible algorithms even when $\mathcal{X}$ is a black box state space.
 
--  In parallel tempering:
-    -   First occurence of odd-even swaps  @okabe2001
+-   In parallel tempering:
+    -   First occurence of odd-even swaps @okabe2001
     -   Non-Reversible Parallel Tempering (NRPT) @syed2022
 -   Non-reversible simulated tempering (NRST)
     -   @sakai2016
     -   @biron-lattes2024
-    
+
 ::: column-margin
 ![](non-reversible.png){height="150"}
 :::
@@ -91,8 +82,7 @@ a black box state space.
 
 ### Adaptive schedules
 
-In challenging problems, using an adaptive discretization of $\beta \in [0, 1]$ 
-is critical for good performance. 
+In challenging problems, using an adaptive discretization of $\beta \in [0, 1]$ is critical for good performance.
 
 ::: column-margin
 ![](adaptive.png){width="150"}
@@ -103,9 +93,7 @@ is critical for good performance.
 
 ### Generalized distribution paths
 
-Most of the methods described so far also apply when the annealing 
-distributions are generalized into a path of distributions. Paths 
-that are geodesic can lead to substantial savings. 
+Most of the methods described so far also apply when the annealing distributions are generalized into a path of distributions. Paths that are geodesic can lead to substantial savings.
 
 ::: column-margin
 ![](geodesic.png){width="150"}
@@ -119,9 +107,7 @@ that are geodesic can lead to substantial savings.
 
 ### Variational blends
 
-Instead of a fixed prior $\pi_0$ as a tractable reference, a fitted 
-variational distribution $q_\phi$ can also be used, either by itself or 
-in conjunction. 
+Instead of a fixed prior $\pi_0$ as a tractable reference, a fitted variational distribution $q_\phi$ can also be used, either by itself or in conjunction.
 
 ::: column-margin
 ![](variational.png){width="120"}
@@ -134,6 +120,13 @@ in conjunction.
     -   @paquet2009
     -   @cameron_recursive_2014
     -   @Surjanovic2022Parallel
+
+### Convergence of adaptive methods
+
+Theoretical frameworks to analyze the convergence of the above adaptive methods (schedule, end points, paths):
+
+-   For stochastic gradient methods, see, e.g., @andrieu2008 for the general toolbox and @miasojedow2013 for analysis in the case of PT specifically.
+-   For round based schemes, see @chimisov2018 for general tools, and @Surjanovic2022Parallel for analysis in the case of variational PT specifically.
 
 ## Software
 
