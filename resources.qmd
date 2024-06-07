@@ -29,7 +29,7 @@ This page is a growing bibliography of Computational Lebesgue Integration method
 ### Annealing
 
 ::: column-margin
-![An example of annealed distributions.](annealing.png){#fig-PT width="200"}
+![An example of annealed distributions.](annealing.png){width="200"}
 :::
 
 Many methods described here *anneal* the distribution of interest $\pi(\text{d}x) \propto \exp(\ell(x)) \pi_0(\text{d}x)$, i.e., consider the path $\pi_\beta(\text{d}x) \propto \exp(\beta \ell(x)) \pi_0(\text{d}x)$. Given the direct connection between $\beta$ and the inverse temperature in statistical mechanics, the notion of annealing appears right from the very beginning of the Monte Carlo literature, in Equation (2) of @metropolis1953. It is used as a tool detached from its statistical mechanics interpretation as early as @pincus1970.
@@ -37,7 +37,7 @@ Many methods described here *anneal* the distribution of interest $\pi(\text{d}x
 ### Meta-algorithms
 
 ::: column-margin
-![Swap structure of PT algorithm.](PT.png){width="200"}
+![Swap structure of a PT algorithm.](PT.png){width="200"}
 :::
 
 Two large families of meta-algorithms are able to take a basic, inefficient MCMC algorithm and transform it into a potentially much faster one while preserving consistency guarantees.
@@ -45,7 +45,7 @@ Two large families of meta-algorithms are able to take a basic, inefficient MCMC
 The first family is designed via MCMC on augmented distributions:
 
 ::: column-margin
-![SMC particle genealogy.](SMC.png){#fig-SMC width="150"}
+![SMC particle genealogy.](SMC.png){width="150"}
 :::
 
 -   Parallel tempering (PT): @geyer1991
