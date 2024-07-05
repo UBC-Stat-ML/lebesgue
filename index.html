@@ -152,14 +152,10 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="annealing">Annealing</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-PT" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-PT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="annealing.png" class="img-fluid figure-img" width="200">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: An example of annealed distributions.
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="annealing.png" class="img-fluid figure-img" width="200"></p>
+<figcaption>An example of annealed distributions.</figcaption>
 </figure>
 </div>
 </div></div><p>Many methods described here <em>anneal</em> the distribution of interest <span class="math inline">\(\pi(\text{d}x) \propto \exp(\ell(x)) \pi_0(\text{d}x)\)</span>, i.e., consider the path <span class="math inline">\(\pi_\beta(\text{d}x) \propto \exp(\beta \ell(x)) \pi_0(\text{d}x)\)</span>. Given the direct connection between <span class="math inline">\(\beta\)</span> and the inverse temperature in statistical mechanics, the notion of annealing appears right from the very beginning of the Monte Carlo literature, in Equation (2) of <span class="citation" data-cites="metropolis1953">Metropolis et al. (<a href="#ref-metropolis1953" role="doc-biblioref">1953</a>)</span>. It is used as a tool detached from its statistical mechanics interpretation as early as <span class="citation" data-cites="pincus1970">Pincus (<a href="#ref-pincus1970" role="doc-biblioref">1970</a>)</span>.</p>
@@ -171,21 +167,17 @@ Figure&nbsp;1: An example of annealed distributions.
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="PT.png" class="img-fluid figure-img" width="200"></p>
-<figcaption>Swap structure of PT algorithm.</figcaption>
+<figcaption>Swap structure of a PT algorithm.</figcaption>
 </figure>
 </div>
 </div></div><p>Two large families of meta-algorithms are able to take a basic, inefficient MCMC algorithm and transform it into a potentially much faster one while preserving consistency guarantees.</p>
 <p>The first family is designed via MCMC on augmented distributions:</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-SMC" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-SMC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="SMC.png" class="img-fluid figure-img" width="150">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SMC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: SMC particle genealogy.
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="SMC.png" class="img-fluid figure-img" width="150"></p>
+<figcaption>SMC particle genealogy.</figcaption>
 </figure>
 </div>
 </div></div><ul>
