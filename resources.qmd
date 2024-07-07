@@ -90,6 +90,7 @@ In challenging problems, using an adaptive discretization of $\beta \in [0, 1]$ 
 
 -   For stochastic gradient methods, see @atchadé2011 and @miasojedow2013.
 -   Round based: @syed2022.
+-   See subsection "Round-based method" of @Bouchard2024MCMCdriven for an explanation of how this implicitly pre-condition the adaptation optimization.
 
 ### Generalized distribution paths
 
