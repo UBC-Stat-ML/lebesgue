@@ -144,7 +144,7 @@ window.Quarto = {
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="lebesgue.png" class="img-fluid" width="200"></p>
 </div></div><p>But in contrast to the theory of Lebesgue integration, which is a settled field, Computational Lebesgue Integration is in active development.</p>
-<p>This page is a growing bibliography of Computational Lebesgue Integration methods. Create a pull request if you would like to add missing entries. To keep the length of this page manageable, we only include methods that (1) apply to any type of target distributions (e.g., we are not including methods that assume real-valued targets), (2) have reasonable scalability to large problems.</p>
+<p>This page is a growing bibliography of Computational Lebesgue Integration methods. <a href="https://github.com/UBC-Stat-ML/lebesgue/pulls">Create a pull request</a> if you would like to add missing entries. To keep the length of this page manageable, we will put priority on methods that (1) apply to any type of target distributions (e.g., we are not including methods that assume real-valued targets), (2) have reasonable scalability to large problems.</p>
 </section>
 <section id="fundamentals" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="fundamentals">Fundamentals</h2>
@@ -194,7 +194,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="normalization-constants">Normalization constants</h3>
 <p>To obtain estimates of normalization constant from the output of the above algorithms, several algorithms are available, for example:</p>
 <ul>
-<li>The stepping stone, a product of importance sampling estimators, see <span class="citation" data-cites="bennett1976">Bennett (<a href="#ref-bennett1976" role="doc-biblioref">1976</a>)</span> and <span class="citation" data-cites="xie2011">Xie et al. (<a href="#ref-xie2011" role="doc-biblioref">2011</a>)</span>.</li>
+<li>The stepping stone, a by-product of importance sampling estimators, see <span class="citation" data-cites="bennett1976">Bennett (<a href="#ref-bennett1976" role="doc-biblioref">1976</a>)</span> and <span class="citation" data-cites="xie2011">Xie et al. (<a href="#ref-xie2011" role="doc-biblioref">2011</a>)</span>.</li>
 <li>Bridge sampling <span class="citation" data-cites="gelman1998">(<a href="#ref-gelman1998" role="doc-biblioref">Gelman and Meng 1998</a>)</span>.</li>
 </ul>
 </section>
@@ -228,8 +228,8 @@ window.Quarto = {
 <p><img src="adaptive.png" class="img-fluid" width="150"></p>
 </div></div><ul>
 <li>For stochastic gradient methods, see <span class="citation" data-cites="atchadé2011">Atchadé, Roberts, and Rosenthal (<a href="#ref-atchadé2011" role="doc-biblioref">2011</a>)</span> and <span class="citation" data-cites="miasojedow2013">Miasojedow, Moulines, and Vihola (<a href="#ref-miasojedow2013" role="doc-biblioref">2013</a>)</span>.</li>
-<li>Round based: <span class="citation" data-cites="syed2022">Syed et al. (<a href="#ref-syed2022" role="doc-biblioref">2022</a>)</span>.</li>
-<li>See subsection “Round-based method” of <span class="citation" data-cites="Bouchard2024MCMCdriven">Bouchard-Côté et al. (<a href="#ref-Bouchard2024MCMCdriven" role="doc-biblioref">2024</a>)</span> for an explanation of how this implicitly pre-condition the adaptation optimization.</li>
+<li>Round based: in the PT context, see <span class="citation" data-cites="syed2022">Syed et al. (<a href="#ref-syed2022" role="doc-biblioref">2022</a>)</span>; in the particle context, see <span class="citation" data-cites="syed_optimised_2024">Syed et al. (<a href="#ref-syed_optimised_2024" role="doc-biblioref">2024</a>)</span>.</li>
+<li>See subsection “Round-based method” of <span class="citation" data-cites="Bouchard2024MCMCdriven">Bouchard-Côté et al. (<a href="#ref-Bouchard2024MCMCdriven" role="doc-biblioref">2024</a>)</span> for an explanation of how this implicitly pre-conditions the adaptation optimization.</li>
 </ul>
 </section>
 <section id="generalized-distribution-paths" class="level3 page-columns page-full">
@@ -367,6 +367,9 @@ Surjanovic, Nikola, Miguel Biron-Lattes, Paul Tiede, Saifuddin Syed, Trevor Camp
 </div>
 <div id="ref-Surjanovic2022Parallel" class="csl-entry" role="listitem">
 Surjanovic, Nikola, Saifuddin Syed, Alexandre Bouchard-Côté, and Trevor Campbell. 2022. <span>“Parallel <span>T</span>empering <span>W</span>ith a <span>V</span>ariational <span>R</span>eference.”</span> In <em>Advances in Neural Information Processing Systems 36 (NeurIPS)</em>, 36:565–77.
+</div>
+<div id="ref-syed_optimised_2024" class="csl-entry" role="listitem">
+Syed, Saifuddin, Alexandre Bouchard-Côté, Kevin Chern, and Arnaud Doucet. 2024. <span>“Optimised <span>Annealed</span> <span>Sequential</span> <span>Monte</span> <span>Carlo</span> <span>Samplers</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2408.12057">https://doi.org/10.48550/arXiv.2408.12057</a>.
 </div>
 <div id="ref-syed2022" class="csl-entry" role="listitem">
 Syed, Saifuddin, Alexandre Bouchard-Côté, George Deligiannidis, and Arnaud Doucet. 2022. <span>“Non-Reversible Parallel Tempering: A Scalable Highly Parallel MCMC Scheme.”</span> <em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em> 84 (2): 321–50. <a href="https://doi.org/10.1111/rssb.12464">https://doi.org/10.1111/rssb.12464</a>.
