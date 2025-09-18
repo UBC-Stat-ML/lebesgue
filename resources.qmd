@@ -22,7 +22,7 @@ The general story of these meta-algorithms starts in the same way as Lebesgue's 
 
 But in contrast to the theory of Lebesgue integration, which is a settled field, Computational Lebesgue Integration is in active development.
 
-This page is a growing bibliography of Computational Lebesgue Integration methods. Create a pull request if you would like to add missing entries. To keep the length of this page manageable, we only include methods that (1) apply to any type of target distributions (e.g., we are not including methods that assume real-valued targets), (2) have reasonable scalability to large problems.
+This page is a growing bibliography of Computational Lebesgue Integration methods. [Create a pull request](https://github.com/UBC-Stat-ML/lebesgue/pulls) if you would like to add missing entries. To keep the length of this page manageable, we will put priority on methods that (1) apply to any type of target distributions (e.g., we are not including methods that assume real-valued targets), (2) have reasonable scalability to large problems.
 
 ## Fundamentals
 
@@ -60,8 +60,10 @@ The second family uses importance sampling on augmented distributions combined w
 
 To obtain estimates of normalization constant from the output of the above algorithms, several algorithms are available, for example:
 
--   The stepping stone, a product of importance sampling estimators, see @bennett1976 and @xie2011.
+-   The stepping stone, a by-product of importance sampling estimators, see @bennett1976 and @xie2011.
 -   Bridge sampling [@gelman1998].
+
+
 
 ## Non-reversible variants
 
@@ -89,8 +91,8 @@ In challenging problems, using an adaptive discretization of $\beta \in [0, 1]$ 
 :::
 
 -   For stochastic gradient methods, see @atchadé2011 and @miasojedow2013.
--   Round based: @syed2022.
--   See subsection "Round-based method" of @Bouchard2024MCMCdriven for an explanation of how this implicitly pre-condition the adaptation optimization.
+-   Round based: in the PT context, see @syed2022; in the particle context, see @syed_optimised_2024.
+-   See subsection "Round-based method" of @Bouchard2024MCMCdriven for an explanation of how this implicitly pre-conditions the adaptation optimization.
 
 ### Generalized distribution paths
 
